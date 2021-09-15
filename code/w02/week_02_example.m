@@ -1,15 +1,17 @@
-% go to directory 
-cd('/Users/boris/Documents/1_github/Fall2020/code/w02')
-myFile = 'ts.mat';
+%% go to directory 
+cd('/Users/boris/Documents/1_github/Fall2021/code/w02')
+% myfile is preprocessed resting state time series mapped to cortical surface (eg via fmriprep)
+myFile = 'ts.mat';      
+% mySurf is fsaverage5 surface template
 mySurf = 'SM.mat';
+% myYeo is yeo-krienen pacellation on cortical surface template
 myYeo  = 'yeo.mat'; 
-myMarg = 'G1.mat';
+% myMyel is myelin map
 myMyel = 'myelin.mat'
 
 load(mySurf); 
 load(myFile);
 load(myYeo);
-load(myMarg); 
 load(myMyel); 
 
 
@@ -43,7 +45,7 @@ VIS             = 2748;
 f=figure;  
     surf_viewer(double(yeo==3),SM,'visual')
 
-rmap = corr(mean(ts(:,yeo==3),2),ts); 
+rmap = corr(mean(ts(:,yeo==4),2),ts); 
 
 f=figure;  
     surf_viewer(rmap,SM,'FPN', [.2 1])
@@ -58,10 +60,5 @@ f=figure;
     colormap(hot);
     
     
-%% -- 
-% 4) load gradient & myelin 
-%
-f=figure, surf_viewer(G1, SM,'')
-f=figure, surf_viewer(myelin, SM,'',[1.5 2])
 
 
