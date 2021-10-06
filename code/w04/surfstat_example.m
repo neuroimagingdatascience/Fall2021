@@ -4,8 +4,9 @@
 % then go to editor on top 
 
 %% 0. define directory and add toolbox
-P='/Users/boris/Documents/1_github/Fall2021/code/w03/'; 
+P='/Users/boris/Documents/1_github/Fall2021/code/w04/'; 
 addpath(genpath(P))
+
 % P='/Users/boris/Documents/1_github/micaopen/surfstat/surfstat_chicago'; 
 % addpath(P)
 
