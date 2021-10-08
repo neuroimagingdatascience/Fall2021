@@ -91,7 +91,7 @@ f = figure;
     
 %% hierarchical 
 d           = pdist(meanz,'cosine');
-z           = squareform(d); 
+z           = sqareform(d); 
 tree        = linkage(d,'average');
 [h,nodes]   = dendrogram(tree,0);
 t           = cluster(tree, 'MaxClust',7); 
