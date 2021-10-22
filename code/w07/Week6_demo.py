@@ -1,12 +1,14 @@
 # Import libraries
 import matplotlib
-matplotlib.use('TkAgg')
+#matplotlib.use('TkAgg')
 
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import itertools
 import numpy as np
 
+ 
+import sklearn
 from sklearn import datasets
 from sklearn.metrics import accuracy_score, mean_absolute_error
 from sklearn.linear_model import Lasso, LinearRegression, LassoCV
