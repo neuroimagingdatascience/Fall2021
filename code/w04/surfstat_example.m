@@ -146,7 +146,8 @@ f=figure
  
 %%    
 % multiple comparions using random field theory          
-pval = SurfStatP(slm,mask);     
+pval = SurfStatP(slm,mask);  
+[pval peak clus clusid] = SurfStatP(slm,mask);  
 f=figure 
     SurfStatView(pval, SM, 'rft') 
 
